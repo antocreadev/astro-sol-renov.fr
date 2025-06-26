@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Zap, Users, Wrench } from "lucide-react"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import { Zap, Users, Wrench } from "lucide-react";
 
 export default function ServicesSection() {
   const services = [
@@ -42,7 +41,7 @@ export default function ServicesSection() {
       color: "emerald",
       image: "/placeholder.svg?height=300&width=400",
     },
-  ]
+  ];
 
   return (
     <section className="py-24 bg-gradient-to-b from-emerald-50 to-white">
@@ -74,13 +73,21 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+              className={`grid lg:grid-cols-2 gap-12 items-center ${
+                index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+              }`}
             >
               {/* Content */}
-              <div className={`space-y-6 ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
+              <div
+                className={`space-y-6 ${
+                  index % 2 === 1 ? "lg:col-start-2" : ""
+                }`}
+              >
                 <div
                   className={`inline-flex items-center gap-4 ${
-                    service.color === "emerald" ? "bg-emerald-100 text-emerald-600" : "bg-orange-100 text-orange-600"
+                    service.color === "emerald"
+                      ? "bg-emerald-100 text-emerald-600"
+                      : "bg-orange-100 text-orange-600"
                   } px-6 py-3 rounded-2xl`}
                 >
                   {service.icon}
@@ -92,7 +99,9 @@ export default function ServicesSection() {
                     <div key={itemIndex} className="flex items-start gap-3">
                       <div
                         className={`w-2 h-2 rounded-full mt-2 ${
-                          service.color === "emerald" ? "bg-emerald-500" : "bg-orange-500"
+                          service.color === "emerald"
+                            ? "bg-emerald-500"
+                            : "bg-orange-500"
                         }`}
                       ></div>
                       <p className="text-gray-700 text-lg">{item}</p>
@@ -104,7 +113,7 @@ export default function ServicesSection() {
               {/* Image */}
               <div className={`${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-                  <Image
+                  <img
                     src={service.image || "/placeholder.svg"}
                     alt={service.title}
                     width={400}
@@ -116,7 +125,9 @@ export default function ServicesSection() {
 
                   <div
                     className={`absolute top-6 right-6 w-12 h-12 rounded-full ${
-                      service.color === "emerald" ? "bg-emerald-500" : "bg-orange-500"
+                      service.color === "emerald"
+                        ? "bg-emerald-500"
+                        : "bg-orange-500"
                     } flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                   >
                     {service.icon}
@@ -128,5 +139,5 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

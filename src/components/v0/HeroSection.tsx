@@ -1,9 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Zap, Home, Euro } from "lucide-react"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Zap, Home, Euro } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -53,7 +52,8 @@ export default function HeroSection() {
                 transition={{ delay: 0.4 }}
                 className="text-xl text-gray-600 leading-relaxed"
               >
-                🏡 Donnez une nouvelle vie à votre habitat. 🌱 Réduisez votre impact. 💶 Maîtrisez vos dépenses.
+                🏡 Donnez une nouvelle vie à votre habitat. 🌱 Réduisez votre
+                impact. 💶 Maîtrisez vos dépenses.
               </motion.p>
             </div>
 
@@ -65,8 +65,8 @@ export default function HeroSection() {
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-emerald-100 shadow-lg"
             >
               <p className="text-lg text-gray-700 mb-4">
-                <strong className="text-emerald-600">SolRenov</strong>, expert en rénovation énergétique et énergies
-                renouvelables.
+                <strong className="text-emerald-600">SolRenov</strong>, expert
+                en rénovation énergétique et énergies renouvelables.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -116,7 +116,9 @@ export default function HeroSection() {
               transition={{ delay: 0.7 }}
               className="text-center p-4 bg-gradient-to-r from-emerald-50 to-orange-50 rounded-xl"
             >
-              <p className="text-sm text-gray-600 mb-2">👉 Bilan énergétique offert & accompagnement complet</p>
+              <p className="text-sm text-gray-600 mb-2">
+                👉 Bilan énergétique offert & accompagnement complet
+              </p>
               <div className="flex items-center justify-center gap-6 text-xs text-gray-500">
                 <span>✅ Certifié RGE</span>
                 <span>✅ 2000+ projets</span>
@@ -133,7 +135,7 @@ export default function HeroSection() {
             className="relative"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <Image
+              <img
                 src="/placeholder.svg?height=600&width=500"
                 alt="Maison moderne avec panneaux solaires"
                 width={500}
@@ -166,5 +168,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

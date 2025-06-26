@@ -1,9 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Star, Quote, Play, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import { Star, Quote, Play, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -11,7 +10,8 @@ export default function TestimonialsSection() {
       name: "Sophie",
       age: 42,
       location: "Bordeaux",
-      quote: "J'ai divisé ma facture par deux, j'ai gagné en confort… et ma maison a pris 60 000 € de valeur !",
+      quote:
+        "J'ai divisé ma facture par deux, j'ai gagné en confort… et ma maison a pris 60 000 € de valeur !",
       details: "Isolation complète + PAC + panneaux solaires",
       savings: "1200€/an",
       valueIncrease: "60 000€",
@@ -21,7 +21,8 @@ export default function TestimonialsSection() {
     {
       name: "Marc & Julie",
       location: "Montpellier",
-      quote: "Une équipe au top, pro, humaine, qui gère tout de A à Z. On dort tranquille.",
+      quote:
+        "Une équipe au top, pro, humaine, qui gère tout de A à Z. On dort tranquille.",
       details: "Rénovation globale avec autoconsommation",
       savings: "950€/an",
       valueIncrease: "45 000€",
@@ -32,14 +33,15 @@ export default function TestimonialsSection() {
       name: "Catherine",
       age: 55,
       location: "Lyon",
-      quote: "En 6 mois, ma maison est devenue un cocon moderne et écologique. Mes enfants sont fiers !",
+      quote:
+        "En 6 mois, ma maison est devenue un cocon moderne et écologique. Mes enfants sont fiers !",
       details: "Isolation + menuiserie + domotique",
       savings: "800€/an",
       valueIncrease: "35 000€",
       image: "/placeholder.svg?height=400&width=300",
       beforeAfter: "/placeholder.svg?height=200&width=400",
     },
-  ]
+  ];
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-gray-50">
@@ -63,7 +65,8 @@ export default function TestimonialsSection() {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Découvrez les témoignages authentiques de nos clients et leurs résultats concrets
+            Découvrez les témoignages authentiques de nos clients et leurs
+            résultats concrets
           </p>
         </motion.div>
 
@@ -82,7 +85,7 @@ export default function TestimonialsSection() {
                 <div className="relative p-6 pb-0">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="relative">
-                      <Image
+                      <img
                         src={testimonial.image || "/placeholder.svg"}
                         alt={testimonial.name}
                         width={60}
@@ -98,14 +101,18 @@ export default function TestimonialsSection() {
                         {testimonial.name}
                         {testimonial.age && `, ${testimonial.age} ans`}
                       </h3>
-                      <p className="text-gray-600 text-sm">{testimonial.location}</p>
+                      <p className="text-gray-600 text-sm">
+                        {testimonial.location}
+                      </p>
                     </div>
                   </div>
 
                   {/* Quote */}
                   <div className="relative">
                     <Quote className="w-8 h-8 text-emerald-200 absolute -top-2 -left-2" />
-                    <p className="text-lg font-medium text-gray-900 leading-relaxed pl-6">{testimonial.quote}</p>
+                    <p className="text-lg font-medium text-gray-900 leading-relaxed pl-6">
+                      {testimonial.quote}
+                    </p>
                   </div>
                 </div>
 
@@ -113,20 +120,28 @@ export default function TestimonialsSection() {
                 <div className="p-6 pt-4">
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="text-center p-3 bg-emerald-50 rounded-xl">
-                      <div className="text-2xl font-bold text-emerald-600">{testimonial.savings}</div>
+                      <div className="text-2xl font-bold text-emerald-600">
+                        {testimonial.savings}
+                      </div>
                       <div className="text-xs text-emerald-700">économisés</div>
                     </div>
                     <div className="text-center p-3 bg-orange-50 rounded-xl">
-                      <div className="text-2xl font-bold text-orange-600">{testimonial.valueIncrease}</div>
-                      <div className="text-xs text-orange-700">de plus-value</div>
+                      <div className="text-2xl font-bold text-orange-600">
+                        {testimonial.valueIncrease}
+                      </div>
+                      <div className="text-xs text-orange-700">
+                        de plus-value
+                      </div>
                     </div>
                   </div>
 
-                  <p className="text-sm text-gray-600 mb-4">{testimonial.details}</p>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {testimonial.details}
+                  </p>
 
                   {/* Before/After preview */}
                   <div className="relative rounded-xl overflow-hidden mb-4">
-                    <Image
+                    <img
                       src={testimonial.beforeAfter || "/placeholder.svg"}
                       alt="Avant/Après"
                       width={400}
@@ -142,10 +157,15 @@ export default function TestimonialsSection() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                        <Star
+                          key={i}
+                          className="w-4 h-4 text-yellow-400 fill-current"
+                        />
                       ))}
                     </div>
-                    <span className="text-sm text-gray-500">Projet réalisé</span>
+                    <span className="text-sm text-gray-500">
+                      Projet réalisé
+                    </span>
                   </div>
                 </div>
               </div>
@@ -186,11 +206,12 @@ export default function TestimonialsSection() {
               <Star className="w-8 h-8 fill-current" />
             </div>
             <p className="text-white/90 text-lg">
-              Sur plus de 2000 projets réalisés, nos clients recommandent SolRenov
+              Sur plus de 2000 projets réalisés, nos clients recommandent
+              SolRenov
             </p>
           </div>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
