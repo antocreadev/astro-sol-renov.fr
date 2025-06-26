@@ -12,11 +12,13 @@ import TestimonialsSection from "./lovable/TestimonialsSection";
 import ValuesSection from "./lovable/ValuesSection";
 import VisionSection from "./lovable/VisionSection";
 import WhySection from "./lovable/WhySection";
+import Navbar from "./Navbar.astro";
 ---
 
 <div
   class="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-orange-50"
 >
+  <Navbar />
   <HeroSection client:load />
   <VisionSection client:load />
   <EmotionalSection client:load />

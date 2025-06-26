@@ -6,7 +6,10 @@ import { ArrowRight, Zap, Home, Euro } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-orange-50">
+    <section
+      id="accueil"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-orange-50 mt-4"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-72 h-72 bg-emerald-400 rounded-full blur-3xl animate-pulse"></div>
@@ -134,13 +137,11 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative bottom-[80px] rounded-3xl overflow-hidden shadow-2xl h-[700px] flex items-center justify-center">
               <img
-                src="/placeholder.svg?height=600&width=500"
+                src="hero.png"
                 alt="Maison moderne avec panneaux solaires"
-                width={500}
-                height={600}
-                className="w-full h-auto object-cover"
+                className="w-[90%] h-auto object-cover p-4"
               />
 
               {/* Floating Cards */}

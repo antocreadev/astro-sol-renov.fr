@@ -1,0 +1,252 @@
+---
+
+---
+
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-transform duration-300 backdrop-blur-lg bg-white/20 border-b border-white/10"
+>
+  <div
+    class="mx-auto lg:mx-0 flex items-center justify-between px-6 py-4 lg:justify-around lg:min-w-[100vw]"
+  >
+    <div class="flex-shrink-0">
+      <a href="/" aria-label="Retour à l'accueil" class="flex items-center gap-3">
+        <img src="logo.svg" alt="Logo SolRenov" class="h-16 lg:h-12" />
+        <span class="text-2xl lg:text-xl font-bold text-gray-800 tracking-wide">
+          SOLRENOV
+        </span>
+      </a>
+    </div>
+
+    <button
+      id="burger-menu"
+      class="lg:hidden text-gray-800 hover:text-black focus:outline-none z-20"
+      aria-controls="nav-links"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Ouvrir le menu</span>
+      <svg
+        id="burger-icon"
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path></svg
+      >
+      <svg
+        id="close-icon"
+        class="w-6 h-6 hidden"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path></svg
+      >
+    </button>
+
+    <ul
+      id="nav-links"
+      class="hidden flex-col space-y-4 absolute top-0 left-0 w-full h-screen pt-24 px-6 text-center text-lg lg:flex lg:relative lg:flex-row lg:space-y-0 lg:space-x-6 lg:h-auto lg:w-auto lg:bg-transparent lg:p-0 lg:top-auto lg:left-auto lg:pt-0 lg:text-sm font-medium text-gray-800
+      bg-white"
+    >
+      <li class="nav-item">
+        <a
+          href="#accueil"
+          class="block py-2 px-1 relative hover:text-black transition-colors"
+          >Accueil</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          href="#vision"
+          class="block py-2 px-1 relative hover:text-black transition-colors"
+          >Notre Vision</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          href="#services"
+          class="block py-2 px-1 relative hover:text-black transition-colors"
+          >Services</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          href="#pourquoi-nous"
+          class="block py-2 px-1 relative hover:text-black transition-colors"
+          >Pourquoi Nous</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          href="#processus"
+          class="block py-2 px-1 relative hover:text-black transition-colors"
+          >Notre Processus</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          href="#temoignages"
+          class="block py-2 px-1 relative hover:text-black transition-colors"
+          >Témoignages</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          href="#contact"
+          class="block py-2 px-1 relative hover:text-black transition-colors"
+          >Contact</a
+        >
+      </li>
+
+      <span
+        id="nav-highlighter"
+        class="hidden lg:block absolute bottom-0 h-0.5 bg-black transition-all duration-300 opacity-0"
+      ></span>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+  /* Empêche le scroll du body quand le menu mobile est ouvert */
+  body.overflow-hidden {
+    overflow: hidden;
+  }
+
+  /* Scroll fluide pour toute la page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #navbar {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  }
+
+  #navbar.at-top {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    const burgerMenu = document.getElementById("burger-menu");
+    const burgerIcon = document.getElementById("burger-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const navLinks = document.getElementById("nav-links");
+
+    // --- Logique du Menu Burger ---
+    if (burgerMenu && navLinks && burgerIcon && closeIcon) {
+      burgerMenu.addEventListener("click", () => {
+        const isExpanded = navLinks.classList.toggle("hidden");
+        burgerMenu.setAttribute("aria-expanded", (!isExpanded).toString());
+
+        // Bascule entre l'icône burger et croix
+        burgerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+
+        // Empêche le scroll du body quand le menu est ouvert sur mobile
+        document.body.classList.toggle("overflow-hidden");
+        // Sur grand écran, on retire la classe pour éviter les problèmes de resize
+        if (window.innerWidth >= 1024) {
+          document.body.classList.remove("overflow-hidden");
+        }
+      });
+    }
+
+    // --- Logique de la barre de navigation au scroll ---
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        const currentScrollY = window.scrollY;
+        const isMenuOpen = navLinks
+          ? !navLinks.classList.contains("hidden")
+          : false;
+
+        // Ne pas masquer la barre si le menu mobile est ouvert
+        if (isMenuOpen && window.innerWidth < 1024) {
+          return;
+        }
+
+        if (navbar) {
+          if (currentScrollY > lastScrollY && currentScrollY > 50) {
+            navbar.style.transform = "translateY(-100%)";
+          } else {
+            navbar.style.transform = "translateY(0)";
+          }
+
+          if (currentScrollY < 20) {
+            navbar.classList.add("at-top");
+          } else {
+            navbar.classList.remove("at-top");
+          }
+        }
+
+        lastScrollY = currentScrollY;
+      },
+      { passive: true }
+    );
+
+    // --- Logique du surlignage (Highlighter) pour Desktop ---
+    const navItems = document.querySelectorAll(".nav-item");
+    const highlighter = document.getElementById("nav-highlighter");
+
+    const isDesktop = () => window.innerWidth >= 1024;
+
+    const updateHighlighter = (item: Element | null) => {
+      if (!isDesktop() || !item || !highlighter) {
+        if (highlighter) highlighter.style.opacity = "0";
+        return;
+      }
+      const itemRect = item.getBoundingClientRect();
+      const navRect = (
+        item.parentElement as HTMLElement
+      )?.getBoundingClientRect();
+
+      if (navRect && highlighter) {
+        highlighter.style.width = `${itemRect.width}px`;
+        highlighter.style.transform = `translateX(${itemRect.left - navRect.left}px)`;
+        highlighter.style.opacity = "1";
+      }
+    };
+
+    const hideHighlighter = () => {
+      const activeItem = document.querySelector(".nav-item.active");
+      if (activeItem && isDesktop() && highlighter) {
+        updateHighlighter(activeItem);
+      } else if (highlighter) {
+        highlighter.style.opacity = "0";
+      }
+    };
+
+    navItems.forEach((item) => {
+      item.addEventListener("mouseenter", () => updateHighlighter(item));
+      item.addEventListener("mouseleave", hideHighlighter);
+    });
+
+    // Gérer le cas où on redimensionne la fenêtre
+    window.addEventListener("resize", hideHighlighter);
+
+    // Positionnement initial
+    const activeItem = document.querySelector(".nav-item.active");
+    updateHighlighter(activeItem);
+  });
+</script>

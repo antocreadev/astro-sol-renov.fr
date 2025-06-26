@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { CheckCircle, Award, Users, Zap, Shield, Heart } from "lucide-react";
 
@@ -27,44 +26,54 @@ const WhySection = () => {
     {
       icon: <Zap className="w-6 h-6 text-orange-500" />,
       title: "Approche tout-en-un : rénovation + énergie = résultats concrets",
-      description: "Une solution globale pour des performances maximales"
+      description: "Une solution globale pour des performances maximales",
     },
     {
       icon: <Award className="w-6 h-6 text-green-500" />,
       title: "Expertise locale & certifiée",
-      description: "Des professionnels qualifiés RGE près de chez vous"
+      description: "Des professionnels qualifiés RGE près de chez vous",
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-blue-500" />,
       title: "Confort et économies dès le premier jour",
-      description: "Des bénéfices immédiats et durables"
+      description: "Des bénéfices immédiats et durables",
     },
     {
       icon: <Shield className="w-6 h-6 text-purple-500" />,
       title: "Haute qualité des matériaux et finitions",
-      description: "Excellence garantie pour votre investissement"
+      description: "Excellence garantie pour votre investissement",
     },
     {
       icon: <Users className="w-6 h-6 text-teal-500" />,
       title: "Zéro paperasse : on s'occupe de tout",
-      description: "Accompagnement administratif complet"
+      description: "Accompagnement administratif complet",
     },
     {
       icon: <Heart className="w-6 h-6 text-red-500" />,
       title: "Suivi personnalisé de A à Z",
-      description: "Une relation de confiance sur le long terme"
-    }
+      description: "Une relation de confiance sur le long terme",
+    },
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section
+      id="pourquoi-nous"
+      ref={sectionRef}
+      className="py-20 px-6 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <div className="inline-flex items-center gap-2 bg-purple-50 rounded-full px-4 py-2 mb-6">
             <CheckCircle className="w-5 h-5 text-purple-600" />
-            <span className="text-purple-600 font-medium">Pourquoi nous choisir</span>
+            <span className="text-purple-600 font-medium">
+              Pourquoi nous choisir
+            </span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
             Pourquoi choisir{" "}
             <span className="bg-gradient-to-r from-green-600 to-orange-600 bg-clip-text text-transparent">
@@ -78,7 +87,9 @@ const WhySection = () => {
             <div
               key={index}
               className={`group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-l-4 border-transparent hover:border-green-500 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
@@ -100,15 +111,22 @@ const WhySection = () => {
         </div>
 
         {/* Mission statement */}
-        <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+        <div
+          className={`text-center transition-all duration-1000 ${
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
+        >
           <div className="bg-gradient-to-r from-green-600 to-orange-600 rounded-3xl p-12 text-white shadow-2xl">
             <h3 className="text-3xl md:text-5xl font-bold mb-6">
               🧠 Notre mission
             </h3>
             <p className="text-2xl text-green-100 font-semibold max-w-4xl mx-auto leading-relaxed">
-              Transformer votre habitat en moteur d'économies et de confort durable.
+              Transformer votre habitat en moteur d'économies et de confort
+              durable.
               <br />
-              <span className="text-yellow-200">Parce que vous méritez un avenir énergétique maîtrisé.</span>
+              <span className="text-yellow-200">
+                Parce que vous méritez un avenir énergétique maîtrisé.
+              </span>
             </p>
           </div>
         </div>
