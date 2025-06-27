@@ -20,7 +20,7 @@ const CtaSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -86,28 +86,25 @@ const CtaSection = () => {
           <div className="flex flex-col lg:flex-row gap-6 justify-center mb-16">
             <Button
               size="lg"
-              className="bg-white text-green-700 hover:bg-green-50 px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-h-[80px] flex items-center gap-4"
+              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-green-700 border-2 border-white px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-h-[80px] flex items-center gap-4"
             >
-              <Zap className="w-8 h-8" />⚡ Je veux mon bilan énergétique
-              gratuit
+              <Zap className="w-8 h-8" /> Je veux mon bilan énergétique gratuit
             </Button>
 
             <Button
               size="lg"
-              variant="outline"
-              className="border-3 border-white text-white hover:bg-white/10 px-12 py-6 text-xl font-bold rounded-2xl backdrop-blur-sm min-h-[80px] flex items-center gap-4"
+              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-green-700 border-2 border-white px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-h-[80px] flex items-center gap-4"
             >
               <MessageCircle className="w-8 h-8" />
-              📞 Être rappelé par un conseiller
+              Être rappelé par un conseiller
             </Button>
 
             <Button
               size="lg"
-              variant="outline"
-              className="border-3 border-white text-white hover:bg-white/10 px-12 py-6 text-xl font-bold rounded-2xl backdrop-blur-sm min-h-[80px] flex items-center gap-4"
+              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-green-700 border-2 border-white px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-h-[80px] flex items-center gap-4"
             >
               <MapPin className="w-8 h-8" />
-              📍 Tester mon éligibilité aux aides
+              Tester mon éligibilité aux aides
             </Button>
           </div>
 

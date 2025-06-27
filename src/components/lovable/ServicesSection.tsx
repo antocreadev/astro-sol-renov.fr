@@ -1,27 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { Home, Zap, Settings, Hammer, Users, Shield } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/use-in-view-animation";
 
 const ServicesSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const { isVisible, sectionRef } = useInViewAnimation(0.05, 0.1);
   const [activeService, setActiveService] = useState(0);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const services = [
     {

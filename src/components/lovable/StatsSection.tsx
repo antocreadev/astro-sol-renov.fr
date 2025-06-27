@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { TrendingUp, Users, Award, Euro } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/use-in-view-animation";
 
 const StatsSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const { isVisible, sectionRef } = useInViewAnimation(0.05, 0.1);
   const [counters, setCounters] = useState({
     savings: 0,
     value: 0,
@@ -11,7 +12,6 @@ const StatsSection = () => {
     grants: 0,
     support: 0,
   });
-  const sectionRef = useRef<HTMLDivElement>(null);
 
   const finalValues = {
     savings: 72,
@@ -23,22 +23,10 @@ const StatsSection = () => {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          animateCounters();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (isVisible) {
+      animateCounters();
     }
-
-    return () => observer.disconnect();
-  }, []);
+  }, [isVisible]);
 
   const animateCounters = () => {
     const duration = 2000;
