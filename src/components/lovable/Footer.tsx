@@ -75,6 +75,41 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Ressources & Blog */}
+          <div>
+            <h3 className="text-xl font-bold mb-6 text-green-400">Ressources</h3>
+            <ul className="space-y-3 text-gray-300">
+              <li>
+                <a 
+                  href="https://sol-renov.fr/blog" 
+                  className="hover:text-white transition-colors"
+                  rel="noopener"
+                >
+                  📰 Blog rénovation énergétique
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://sol-renov.fr/guides" 
+                  className="hover:text-white transition-colors"
+                  rel="noopener"
+                >
+                  📖 Guides pratiques
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://sol-renov.fr/actualites" 
+                  className="hover:text-white transition-colors"
+                  rel="noopener"
+                >
+                  📢 Actualités aides & primes
+                </a>
+              </li>
+              <li>Calculateur d'économies</li>
+            </ul>
+          </div>
+
           {/* Certifications */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-green-400">

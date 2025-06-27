@@ -23,7 +23,13 @@ export async function GET() {
     <loc>https://sol-renov.com/#contact</loc>
     <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sol-renov.com/mentions-legales</loc>
+    <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>`;
 

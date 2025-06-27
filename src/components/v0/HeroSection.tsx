@@ -44,15 +44,9 @@ export default function HeroSection() {
                 transition={{ delay: 0.3 }}
                 className="text-5xl lg:text-7xl font-bold leading-tight"
               >
-                <span className="block text-gray-900">
-                  Rénovation Énergétique
-                </span>
-                <span className="block text-emerald-600">
-                  Panneaux Solaires
-                </span>
-                <span className="block text-orange-500">
-                  Expert Certifié RGE
-                </span>
+                <span className="block text-gray-900">Rénovez,</span>
+                <span className="block text-emerald-600">Économisez,</span>
+                <span className="block text-orange-500">Respirez.</span>
               </motion.h1>
 
               <motion.p
