@@ -1,18 +1,167 @@
 ---
 import "../styles/global.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = "SolRenov - Expert Rénovation Énergétique & Panneaux Solaires | Économisez jusqu'à 70%",
+  description = "🏡 Spécialiste de la rénovation énergétique et installation de panneaux solaires. Isolation, pompe à chaleur, autoconsommation. ✅ Certifié RGE ⚡ Jusqu'à 9000€ d'aides ⭐ 98% de satisfaction clients. Devis gratuit !",
+  keywords = "rénovation énergétique, panneaux solaires, isolation thermique, pompe à chaleur, autoconsommation, MaPrimeRénov, CEE, Eco-PTZ, RGE, économies énergie, audit énergétique",
+  image = "/hero.png",
+  canonical,
+  noindex = false,
+} = Astro.props;
+
+const currentUrl = new URL(Astro.request.url);
+const canonicalUrl = canonical || currentUrl.href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title et Description -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Robots -->
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {
+      !noindex && (
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+      )
+    }
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="SolRenov" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Technical -->
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <meta name="theme-color" content="#16a34a" />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Business Info -->
+    <meta name="geo.region" content="FR" />
+    <meta name="geo.country" content="France" />
+    <meta name="author" content="SolRenov" />
+    <meta name="company" content="SolRenov - Rénovation Énergétique" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SolRenov",
+        "description": "Expert en rénovation énergétique et installation de panneaux solaires",
+        "url": "https://sol-renov.com",
+        "telephone": "+33123456789",
+        "email": "contact@solrenov.fr",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "FR",
+          "addressRegion": "France"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "46.6034",
+          "longitude": "1.8883"
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "priceRange": "€€",
+        "serviceArea": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "areaServed": "France",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services de rénovation énergétique",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Isolation thermique",
+                "description": "Isolation des combles, murs et sols pour améliorer la performance énergétique"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Installation panneaux solaires",
+                "description": "Installation de panneaux photovoltaïques pour l'autoconsommation"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Pompe à chaleur",
+                "description": "Installation de pompes à chaleur air-eau et air-air"
+              }
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "2000",
+          "bestRating": "5"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/solrenov",
+          "https://www.instagram.com/solrenov_renovation"
+        ]
+      }
+    </script>
   </head>
   <body>
     <slot />
+
+    <!-- Google Analytics ou autre tracking -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
   </body>
 </html>
 
@@ -22,5 +171,17 @@ import "../styles/global.css";
     margin: 0;
     width: 100%;
     height: 100%;
+    scroll-behavior: smooth;
+  }
+
+  /* Améliorer les performances de rendu */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Optimisation des images */
+  img {
+    max-width: 100%;
+    height: auto;
   }
 </style>

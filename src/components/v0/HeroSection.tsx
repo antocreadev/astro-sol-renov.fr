@@ -36,7 +36,7 @@ export default function HeroSection() {
               Expert tout-en-un en rénovation énergétique
             </motion.div>
 
-            {/* Main Headline */}
+            {/* Main Headline - SEO optimisé */}
             <div className="space-y-4">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -44,9 +44,15 @@ export default function HeroSection() {
                 transition={{ delay: 0.3 }}
                 className="text-5xl lg:text-7xl font-bold leading-tight"
               >
-                <span className="block text-gray-900">Rénovez.</span>
-                <span className="block text-emerald-600">Économisez.</span>
-                <span className="block text-orange-500">Respirez.</span>
+                <span className="block text-gray-900">
+                  Rénovation Énergétique
+                </span>
+                <span className="block text-emerald-600">
+                  Panneaux Solaires
+                </span>
+                <span className="block text-orange-500">
+                  Expert Certifié RGE
+                </span>
               </motion.h1>
 
               <motion.p
@@ -55,8 +61,9 @@ export default function HeroSection() {
                 transition={{ delay: 0.4 }}
                 className="text-xl text-gray-600 leading-relaxed"
               >
-                🏡 Donnez une nouvelle vie à votre habitat. 🌱 Réduisez votre
-                impact. 💶 Maîtrisez vos dépenses.
+                🏡 Isolation thermique, pompe à chaleur, autoconsommation
+                solaire. 🌱 Jusqu'à 70% d'économies d'énergie. 💶 Jusqu'à 9000€
+                d'aides cumulables.
               </motion.p>
             </div>
 

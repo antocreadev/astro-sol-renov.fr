@@ -15,19 +15,67 @@ import WhySection from "./lovable/WhySection";
 import Navbar from "./Navbar.astro";
 ---
 
-<div
+<main
   class="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-orange-50"
+  role="main"
+  aria-label="Contenu principal - SolRenov rénovation énergétique"
 >
   <Navbar />
-  <HeroSection client:load />
-  <VisionSection client:load />
-  <EmotionalSection client:load />
-  <StatsSection client:load />
-  <ServicesSection client:load />
-  <WhySection client:load />
-  <ProcessSection client:load />
-  <ValuesSection client:load />
-  <TestimonialsSection client:load />
-  <CtaSection client:load />
-  <Footer client:load />
-</div>
+
+  <!-- Sections avec structure sémantique SEO optimisée -->
+  <section id="accueil" aria-label="Héro - Présentation SolRenov">
+    <HeroSection client:load />
+  </section>
+
+  <section id="vision" aria-label="Notre vision de la rénovation énergétique">
+    <VisionSection client:load />
+  </section>
+
+  <section
+    id="problemes"
+    aria-label="Problèmes énergétiques résolus par SolRenov"
+  >
+    <EmotionalSection client:load />
+  </section>
+
+  <section id="statistiques" aria-label="Chiffres clés et performance SolRenov">
+    <StatsSection client:load />
+  </section>
+
+  <section
+    id="services"
+    aria-label="Services de rénovation énergétique proposés"
+  >
+    <ServicesSection client:load />
+  </section>
+
+  <section id="pourquoi-nous" aria-label="Avantages de choisir SolRenov">
+    <WhySection client:load />
+  </section>
+
+  <section id="processus" aria-label="Processus de rénovation énergétique">
+    <ProcessSection client:load />
+  </section>
+
+  <section id="valeurs" aria-label="Valeurs et engagements SolRenov">
+    <ValuesSection client:load />
+  </section>
+
+  <section
+    id="temoignages"
+    aria-label="Témoignages clients rénovation énergétique"
+  >
+    <TestimonialsSection client:load />
+  </section>
+
+  <section
+    id="contact"
+    aria-label="Contact et devis gratuit rénovation énergétique"
+  >
+    <CtaSection client:load />
+  </section>
+
+  <footer aria-label="Pied de page SolRenov">
+    <Footer client:load />
+  </footer>
+</main>

@@ -1,11 +1,17 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const seoData = {
+  title:
+    "SolRenov - Expert Rénovation Énergétique & Panneaux Solaires | Économisez jusqu'à 70%",
+  description:
+    "🏡 Spécialiste rénovation énergétique: isolation, pompe à chaleur, panneaux solaires. ✅ Certifié RGE ⚡ Jusqu'à 9000€ d'aides ⭐ 98% clients satisfaits. Devis gratuit !",
+  keywords:
+    "rénovation énergétique, panneaux solaires, isolation thermique, pompe à chaleur, autoconsommation, MaPrimeRénov, CEE, Eco-PTZ, RGE, économies énergie, audit énergétique, artisan certifié",
+};
 ---
 
-<Layout>
-	<Welcome />
+<Layout {...seoData}>
+  <Welcome />
 </Layout>

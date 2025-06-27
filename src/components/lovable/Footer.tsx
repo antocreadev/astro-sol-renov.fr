@@ -1,5 +1,12 @@
-
-import { MapPin, Phone, Mail, Shield, Instagram, Linkedin, Youtube } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Shield,
+  Instagram,
+  Linkedin,
+  Youtube,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,7 +23,7 @@ const Footer = () => {
               <span className="text-2xl font-bold">SolRenov</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Rénovation énergétique tout-en-un pour un habitat durable, 
+              Rénovation énergétique tout-en-un pour un habitat durable,
               économique et confortable.
             </p>
             <div className="flex gap-4">
@@ -38,7 +45,9 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-300">📍 Interventions France entière</span>
+                <span className="text-gray-300">
+                  📍 Interventions France entière
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gray-400" />
@@ -53,7 +62,9 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-6 text-green-400">Nos Services</h3>
+            <h3 className="text-xl font-bold mb-6 text-green-400">
+              Nos Services
+            </h3>
             <ul className="space-y-3 text-gray-300">
               <li>Isolation thermique</li>
               <li>Panneaux solaires</li>
@@ -66,7 +77,9 @@ const Footer = () => {
 
           {/* Certifications */}
           <div>
-            <h3 className="text-xl font-bold mb-6 text-green-400">Certifications</h3>
+            <h3 className="text-xl font-bold mb-6 text-green-400">
+              Certifications
+            </h3>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Shield className="w-5 h-5 text-green-400" />
@@ -91,9 +104,24 @@ const Footer = () => {
               © 2024 SolRenov. Tous droits réservés.
             </div>
             <div className="flex gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">📄 Mentions légales</a>
-              <a href="#" className="hover:text-white transition-colors">Politique RGPD</a>
-              <a href="#" className="hover:text-white transition-colors">CGV</a>
+              <a
+                href="/mentions-legales"
+                className="hover:text-white transition-colors"
+              >
+                📄 Mentions légales
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Politique RGPD
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                CGV
+              </a>
+              <a
+                href="/sitemap.xml"
+                className="hover:text-white transition-colors"
+              >
+                Plan du site
+              </a>
             </div>
           </div>
         </div>
