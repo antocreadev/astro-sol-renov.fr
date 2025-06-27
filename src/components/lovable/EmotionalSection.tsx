@@ -25,27 +25,27 @@ const EmotionalSection = () => {
   const benefits = [
     {
       icon: <Zap className="w-8 h-8 text-orange-500" />,
-      title: "réduisent leur facture de chauffage",
+      title: "Nos clients réduisent leur facture de chauffage",
       value: "1100 €/an",
-      description: "d'économies réelles",
+      description: "d'économies réelles en moyenne",
     },
     {
       icon: <Zap className="w-8 h-8 text-green-500" />,
-      title: "produisent leur propre énergie",
+      title: "Ils produisent leur propre énergie",
       value: "100%",
-      description: "grâce au solaire intelligent",
+      description: "autonome grâce au solaire intelligent",
     },
     {
       icon: <Shield className="w-8 h-8 text-blue-500" />,
-      title: "gagnent en confort et sécurité",
+      title: "Ils gagnent en confort et sécurité",
       value: "24/7",
-      description: "tranquillité d'esprit",
+      description: "protection et tranquillité d'esprit",
     },
     {
       icon: <Leaf className="w-8 h-8 text-green-600" />,
-      title: "valorisent leur bien",
+      title: "Ils valorisent leur patrimoine",
       value: "+30%",
-      description: "tout en réduisant leur empreinte",
+      description: "tout en réduisant leur empreinte carbone",
     },
   ];
 

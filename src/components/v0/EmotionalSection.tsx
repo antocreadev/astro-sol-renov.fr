@@ -1,35 +1,35 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Heart, Zap, Shield, TrendingUp } from "lucide-react"
+import { motion } from "framer-motion";
+import { Heart, Zap, Shield, TrendingUp } from "lucide-react";
 
 export default function EmotionalSection() {
   const benefits = [
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "réduisent leur facture de chauffage",
+      title: "Nos clients réduisent leur facture de chauffage",
       value: "1100 €/an",
       color: "emerald",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "produisent leur propre énergie",
+      title: "Ils produisent leur propre énergie",
       value: "100% autonome",
       color: "orange",
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "gagnent en confort et sécurité",
+      title: "Ils gagnent en confort et sécurité",
       value: "Tranquillité",
       color: "emerald",
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "valorisent leur patrimoine",
+      title: "Ils valorisent leur patrimoine",
       value: "+30% valeur",
       color: "orange",
     },
-  ]
+  ];
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-emerald-50">
@@ -67,7 +67,9 @@ export default function EmotionalSection() {
               <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-emerald-200">
                 <div
                   className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 ${
-                    benefit.color === "emerald" ? "bg-emerald-100 text-emerald-600" : "bg-orange-100 text-orange-600"
+                    benefit.color === "emerald"
+                      ? "bg-emerald-100 text-emerald-600"
+                      : "bg-orange-100 text-orange-600"
                   } group-hover:scale-110 transition-transform duration-300`}
                 >
                   {benefit.icon}
@@ -75,7 +77,9 @@ export default function EmotionalSection() {
 
                 <div
                   className={`text-3xl font-bold mb-2 ${
-                    benefit.color === "emerald" ? "text-emerald-600" : "text-orange-600"
+                    benefit.color === "emerald"
+                      ? "text-emerald-600"
+                      : "text-orange-600"
                   }`}
                 >
                   {benefit.value}
@@ -98,12 +102,17 @@ export default function EmotionalSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-orange-600/20"></div>
             <div className="relative z-10">
               <h3 className="text-3xl lg:text-4xl font-bold mb-6">
-                Et vous ? Vous pouvez attendre que les prix de l'énergie explosent.
+                Et vous ? Vous pouvez attendre que les prix de l'énergie
+                explosent.
               </h3>
-              <p className="text-xl text-gray-300 mb-8">Ou faire le choix de reprendre le contrôle dès aujourd'hui.</p>
+              <p className="text-xl text-gray-300 mb-8">
+                Ou faire le choix de reprendre le contrôle dès aujourd'hui.
+              </p>
               <div className="inline-flex items-center gap-4">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                <span className="text-emerald-400 font-semibold">Le moment d'agir, c'est maintenant</span>
+                <span className="text-emerald-400 font-semibold">
+                  Le moment d'agir, c'est maintenant
+                </span>
                 <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
               </div>
             </div>
@@ -111,5 +120,5 @@ export default function EmotionalSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
