@@ -27,15 +27,30 @@ const Footer = () => {
               économique et confortable.
             </p>
             <div className="flex gap-4">
-              <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
+              <a
+                href="https://instagram.com/solrenov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer"
+              >
                 <Instagram className="w-5 h-5" />
-              </div>
-              <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
+              </a>
+              <a
+                href="https://linkedin.com/company/solrenov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer"
+              >
                 <Linkedin className="w-5 h-5" />
-              </div>
-              <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
+              </a>
+              <a
+                href="https://youtube.com/@solrenov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer"
+              >
                 <Youtube className="w-5 h-5" />
-              </div>
+              </a>
             </div>
           </div>
 
@@ -46,16 +61,26 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-gray-400" />
                 <span className="text-gray-300">
-                  📍 Interventions France entière
+                   Interventions France entière
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-300">📞 06 11 09 22 30</span>
+                <a
+                  href="tel:+33611092230"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                   06 11 09 22 30
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-300">✉️ contact@solrenov.fr</span>
+                <a
+                  href="mailto:contact@solrenov.fr"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  contact@solrenov.fr
+                </a>
               </div>
             </div>
           </div>
@@ -110,10 +135,16 @@ const Footer = () => {
               >
                 📄 Mentions légales
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a
+                href="/politique-confidentialite"
+                className="hover:text-white transition-colors"
+              >
                 Politique RGPD
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a
+                href="/conditions-generales"
+                className="hover:text-white transition-colors"
+              >
                 CGV
               </a>
               <a

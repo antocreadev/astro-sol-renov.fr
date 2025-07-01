@@ -79,7 +79,7 @@ const ServicesSection = () => {
           <div className="flex items-center justify-center gap-2 text-green-600">
             <Shield className="w-6 h-6" />
             <span className="text-xl font-semibold">
-              🎯 Un seul interlocuteur, un projet 100% maîtrisé
+              Un seul interlocuteur, un projet 100% maîtrisé
             </span>
           </div>
         </div>
@@ -132,12 +132,37 @@ const ServicesSection = () => {
         >
           <div className="bg-gradient-to-r from-green-600 to-orange-600 rounded-3xl p-12 text-white shadow-2xl">
             <h3 className="text-3xl md:text-5xl font-bold mb-6">
-              🧠 Notre mission
+              Prêt à passer à l'action ?
             </h3>
-            <p className="text-2xl text-green-100 font-semibold max-w-3xl mx-auto">
-              Transformer votre habitat en moteur d'économies et de confort
-              durable.
+            <p className="text-xl text-green-100 font-medium max-w-3xl mx-auto mb-8">
+              Découvrez en 2 minutes les économies réalisables chez vous et les
+              aides auxquelles vous avez droit.
             </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button
+                className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                onClick={() =>
+                  window.open("https://simulation.sol-renov.com", "_blank")
+                }
+              >
+                <Home className="w-5 h-5" />
+                Simuler ma rénovation
+              </button>
+
+              <button
+                className="bg-orange-500 text-white hover:bg-orange-600 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                onClick={() =>
+                  window.open(
+                    "https://simulation-solaire.sol-renov.com",
+                    "_blank"
+                  )
+                }
+              >
+                <Zap className="w-5 h-5" />
+                Simuler mes panneaux solaires
+              </button>
+            </div>
           </div>
         </div>
       </div>

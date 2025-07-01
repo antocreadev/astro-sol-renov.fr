@@ -99,7 +99,7 @@ const WhySection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                    ✅ {advantage.title}
+                    {advantage.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     {advantage.description}
@@ -118,9 +118,9 @@ const WhySection = () => {
         >
           <div className="bg-gradient-to-r from-green-600 to-orange-600 rounded-3xl p-12 text-white shadow-2xl">
             <h3 className="text-3xl md:text-5xl font-bold mb-6">
-              🧠 Notre mission
+              Notre mission
             </h3>
-            <p className="text-2xl text-green-100 font-semibold max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl text-green-100 font-semibold max-w-4xl mx-auto leading-relaxed mb-8">
               Transformer votre habitat en moteur d'économies et de confort
               durable.
               <br />
@@ -128,6 +128,31 @@ const WhySection = () => {
                 Parce que vous méritez un avenir énergétique maîtrisé.
               </span>
             </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button
+                className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                onClick={() =>
+                  window.open("https://simulation.sol-renov.com", "_blank")
+                }
+              >
+                <CheckCircle className="w-5 h-5" />
+                Prendre contact pour rénovation énergétique
+              </button>
+
+              <button
+                className="bg-orange-500 text-white hover:bg-orange-600 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                onClick={() =>
+                  window.open(
+                    "https://simulation-solaire.sol-renov.com",
+                    "_blank"
+                  )
+                }
+              >
+                <Zap className="w-5 h-5" />
+                Prendre contact pour panneaux solaires
+              </button>
+            </div>
           </div>
         </div>
       </div>

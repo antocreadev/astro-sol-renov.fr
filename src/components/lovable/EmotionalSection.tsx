@@ -125,11 +125,16 @@ const EmotionalSection = () => {
           <p className="text-2xl text-green-400 font-semibold mb-8">
             Ou faire le choix de reprendre le contrôle dès aujourd'hui.
           </p>
-          <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3">
+          <button
+            className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+            onClick={() =>
+              window.open("https://simulation.sol-renov.com", "_blank")
+            }
+          >
             <span className="text-white">
               Le choix intelligent, c'est maintenant ⏰
             </span>
-          </div>
+          </button>
         </div>
       </div>
     </section>

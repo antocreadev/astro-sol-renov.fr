@@ -55,7 +55,7 @@ const CtaSection = () => {
           </div>
 
           <h2 className="text-4xl md:text-7xl font-bold text-white mb-8 leading-tight">
-            🎯 Vous voulez un habitat plus{" "}
+            Vous voulez un habitat plus{" "}
             <span className="text-yellow-300">intelligent,</span>
             <br />
             plus <span className="text-yellow-300">rentable,</span> plus{" "}
@@ -86,25 +86,26 @@ const CtaSection = () => {
           <div className="flex flex-col lg:flex-row gap-6 justify-center mb-16">
             <Button
               size="lg"
-              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-green-700 border-2 border-white px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-h-[80px] flex items-center gap-4"
+              className="bg-green-600 text-white hover:bg-green-700 border-2 border-green-600 hover:border-green-700 px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-h-[80px] flex items-center gap-4"
+              onClick={() =>
+                window.open("https://simulation.sol-renov.com", "_blank")
+              }
             >
-              <Zap className="w-8 h-8" /> Je veux mon bilan énergétique gratuit
+              <Zap className="w-8 h-8" /> Simuler ma rénovation énergétique
             </Button>
 
             <Button
               size="lg"
-              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-green-700 border-2 border-white px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-h-[80px] flex items-center gap-4"
+              className="bg-orange-500 text-white hover:bg-orange-600 border-2 border-orange-500 hover:border-orange-600 px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-h-[80px] flex items-center gap-4"
+              onClick={() =>
+                window.open(
+                  "https://simulation-solaire.sol-renov.com",
+                  "_blank"
+                )
+              }
             >
               <MessageCircle className="w-8 h-8" />
-              Être rappelé par un conseiller
-            </Button>
-
-            <Button
-              size="lg"
-              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-green-700 border-2 border-white px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-h-[80px] flex items-center gap-4"
-            >
-              <MapPin className="w-8 h-8" />
-              Tester mon éligibilité aux aides
+              Simuler mes panneaux solaires
             </Button>
           </div>
 

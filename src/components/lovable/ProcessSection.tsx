@@ -199,10 +199,15 @@ const ProcessSection = () => {
             <p className="text-xl text-green-100 mb-6">
               Votre projet personnalisé vous attend. Parlons-en ensemble.
             </p>
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
+            <button
+              className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 hover:bg-white/30 transition-all duration-300 transform hover:scale-105"
+              onClick={() =>
+                window.open("https://simulation.sol-renov.com", "_blank")
+              }
+            >
               <Phone className="w-5 h-5" />
               <span className="font-semibold">Démarrer maintenant</span>
-            </div>
+            </button>
           </div>
         </div>
       </div>

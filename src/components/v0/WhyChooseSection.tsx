@@ -1,7 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { CheckCircle, Target, Award, Shield, FileText, Users } from "lucide-react"
+import { motion } from "framer-motion";
+import {
+  CheckCircle,
+  Target,
+  Award,
+  Shield,
+  FileText,
+  Users,
+} from "lucide-react";
 
 export default function WhyChooseSection() {
   const reasons = [
@@ -29,7 +36,7 @@ export default function WhyChooseSection() {
       icon: <Users className="w-6 h-6" />,
       title: "Suivi personnalisé de A à Z",
     },
-  ]
+  ];
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-gray-50">
@@ -71,9 +78,11 @@ export default function WhyChooseSection() {
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <CheckCircle className="w-5 h-5 text-emerald-500" />
-                      <span className="text-emerald-600 font-semibold text-sm">✅</span>
+                      <span className="text-emerald-600 font-semibold text-sm"></span>
                     </div>
-                    <p className="text-gray-900 font-medium leading-relaxed">{reason.title}</p>
+                    <p className="text-gray-900 font-medium leading-relaxed">
+                      {reason.title}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -92,14 +101,17 @@ export default function WhyChooseSection() {
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10">
               <Target className="w-16 h-16 mx-auto mb-6 opacity-80" />
-              <h3 className="text-3xl lg:text-4xl font-bold mb-4">🧠 Notre mission</h3>
+              <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+                Notre mission
+              </h3>
               <p className="text-xl text-white/90 max-w-3xl mx-auto">
-                Transformer votre habitat en moteur d'économies et de confort durable.
+                Transformer votre habitat en moteur d'économies et de confort
+                durable.
               </p>
             </div>
           </div>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

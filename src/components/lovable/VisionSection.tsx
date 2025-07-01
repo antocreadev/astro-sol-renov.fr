@@ -49,12 +49,17 @@ const VisionSection = () => {
             résilients.
           </p>
 
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-orange-600 text-white rounded-full px-8 py-4 shadow-lg">
+          <button
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-orange-600 text-white rounded-full px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            onClick={() =>
+              window.open("https://simulation.sol-renov.com", "_blank")
+            }
+          >
             <Zap className="w-6 h-6" />
             <span className="text-xl font-semibold">
               Un seul interlocuteur, pour un projet global qui a du sens.
             </span>
-          </div>
+          </button>
         </div>
 
         {/* Cards des valeurs */}

@@ -16,8 +16,8 @@ export default function CTASection() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-orange-600 text-white px-6 py-3 rounded-full text-lg font-medium mb-6">
-            🎯 Vous voulez un habitat plus intelligent, plus rentable, plus
-            durable ?
+            Vous voulez un habitat plus intelligent, plus rentable, plus durable
+            ?
           </div>
 
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">

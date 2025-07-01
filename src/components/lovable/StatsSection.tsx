@@ -166,12 +166,18 @@ const StatsSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-4 shadow-lg">
+          <button
+            className="inline-flex items-center gap-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            onClick={() =>
+              window.open("https://simulation.sol-renov.com", "_blank")
+            }
+          >
             <Award className="w-6 h-6" />
             <span className="font-semibold">
-              🟢 Certifié RGE – Éligible MaPrimeRénov', CEE, Eco PTZ
+              🟢 Certifié RGE – Tester votre éligibilité aux aides MaPrimeRénov', CEE, Eco PTZ
+     
             </span>
-          </div>
+          </button>
         </div>
       </div>
     </section>
