@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Company info */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-orange-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">S</span>
               </div>
               <span className="text-2xl font-bold">SolRenov</span>
@@ -61,7 +61,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-gray-400" />
                 <span className="text-gray-300">
-                   Interventions France entière
+                  Interventions France entière
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -70,7 +70,7 @@ const Footer = () => {
                   href="tel:+33611092230"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                   06 11 09 22 30
+                  06 11 09 22 30
                 </a>
               </div>
               <div className="flex items-center gap-3">

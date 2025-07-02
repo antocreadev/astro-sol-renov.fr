@@ -9,7 +9,7 @@ const VisionSection = () => {
     <section
       id="vision"
       ref={sectionRef}
-      className="py-20 px-6 bg-gradient-to-br from-white via-green-50 to-orange-50 relative overflow-hidden"
+      className="py-20 px-6 bg-gradient-to-br from-white via-green-50 to-green-100 relative overflow-hidden"
     >
       {/* Éléments décoratifs */}
       <div className="absolute top-10 right-10 w-32 h-32 bg-green-200/30 rounded-full blur-2xl" />
@@ -28,13 +28,13 @@ const VisionSection = () => {
 
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
             Une maison plus{" "}
-            <span className="bg-gradient-to-r from-green-600 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">
               performante.
             </span>
             <br />
             Une planète <span className="text-green-600">préservée.</span>
             <br />
-            Un quotidien <span className="text-orange-600">transformé.</span>
+            Un quotidien <span className="text-green-700">transformé.</span>
           </h2>
 
           <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -50,7 +50,7 @@ const VisionSection = () => {
           </p>
 
           <button
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-orange-600 text-white rounded-full px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-full px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             onClick={() =>
               window.open("https://simulation.sol-renov.com", "_blank")
             }

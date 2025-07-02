@@ -73,7 +73,7 @@ const EmotionalSection = () => {
 
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Et si votre maison devenait votre{" "}
-            <span className="bg-gradient-to-r from-green-600 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">
               meilleur investissement ?
             </span>
           </h2>

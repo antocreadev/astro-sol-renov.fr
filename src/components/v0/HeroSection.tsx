@@ -8,12 +8,12 @@ export default function HeroSection() {
   return (
     <section
       id="accueil"
-      className="relative min-h-screen flex justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-orange-50 mt-4"
+      className="relative min-h-screen flex justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-emerald-100 mt-4"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-72 h-72 bg-emerald-400 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-orange-400 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -42,7 +42,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-5xl lg:text-7xl font-bold leading-tight"
+                className="text-5xl lg:text-7xl font-bold leading-tight relative lg:bottom-4"
               >
                 <span className="block text-gray-900">Rénovez,</span>
                 <span className="block text-emerald-600">Économisez,</span>
@@ -55,7 +55,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-emerald-100 shadow-lg space-y-4"
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-emerald-100 shadow-lg space-y-4 relative lg:bottom-7"
             >
               {/* Header */}
               <div></div>
@@ -123,7 +123,7 @@ export default function HeroSection() {
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl h-[600px] flex items-center justify-center ">
               <img
-                src="hero.png"
+                src="hero3.png"
                 alt="Maison moderne avec panneaux solaires"
                 className="w-[90%] h-auto object-cover p-4"
               />

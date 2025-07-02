@@ -34,7 +34,7 @@ const CtaSection = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-20 px-6 bg-gradient-to-br from-green-600 via-green-700 to-orange-600 relative overflow-hidden"
+      className="py-20 px-6 bg-gradient-to-br from-green-600 via-green-700 to-green-800 relative overflow-hidden"
     >
       {/* Éléments décoratifs */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />

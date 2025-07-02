@@ -69,7 +69,7 @@ const ServicesSection = () => {
 
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             SolRenov, c'est l'offre{" "}
-            <span className="bg-gradient-to-r from-green-600 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">
               tout-en-un
             </span>
             <br />
@@ -115,7 +115,7 @@ const ServicesSection = () => {
               <ul className="space-y-3">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-orange-500 rounded-full mt-2 flex-shrink-0" />
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -130,7 +130,7 @@ const ServicesSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="bg-gradient-to-r from-green-600 to-orange-600 rounded-3xl p-12 text-white shadow-2xl">
+          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-12 text-white shadow-2xl">
             <h3 className="text-3xl md:text-5xl font-bold mb-6">
               Prêt à passer à l'action ?
             </h3>

@@ -87,7 +87,7 @@ const ProcessSection = () => {
       {/* Ligne de progression */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gray-200">
         <div
-          className="h-full bg-gradient-to-r from-green-500 to-orange-500 transition-all duration-1000"
+          className="h-full bg-green-500 transition-all duration-1000"
           style={{ width: isVisible ? "100%" : "0%" }}
         />
       </div>
@@ -107,7 +107,7 @@ const ProcessSection = () => {
 
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Un parcours{" "}
-            <span className="bg-gradient-to-r from-green-600 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">
               simple, fluide, accompagné
             </span>
           </h2>
@@ -121,7 +121,7 @@ const ProcessSection = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Ligne de connexion */}
-          <div className="absolute left-8 top-16 bottom-16 w-1 bg-gradient-to-b from-green-500 to-orange-500 hidden lg:block" />
+          <div className="absolute left-8 top-16 bottom-16 w-1 bg-green-500 hidden lg:block" />
 
           <div className="space-y-8">
             {steps.map((step, index) => (
@@ -192,7 +192,7 @@ const ProcessSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="bg-gradient-to-r from-green-600 to-orange-600 rounded-3xl p-8 text-white shadow-2xl">
+          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-8 text-white shadow-2xl">
             <h3 className="text-3xl font-bold mb-4">
               Prêt à commencer votre transformation ? 🚀
             </h3>

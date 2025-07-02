@@ -76,7 +76,7 @@ const WhySection = () => {
 
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
             Pourquoi choisir{" "}
-            <span className="bg-gradient-to-r from-green-600 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">
               SolRenov ?
             </span>
           </h2>
@@ -116,7 +116,7 @@ const WhySection = () => {
             isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         >
-          <div className="bg-gradient-to-r from-green-600 to-orange-600 rounded-3xl p-12 text-white shadow-2xl">
+          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-12 text-white shadow-2xl">
             <h3 className="text-3xl md:text-5xl font-bold mb-6">
               Notre mission
             </h3>
