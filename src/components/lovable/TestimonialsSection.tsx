@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
     {
       name: "Sophie",
       age: "42 ans",
-      location: "Bastoa",
+      location: "Bastia",
       quote:
         "J'ai divisé ma facture par deux, j'ai gagné en confort… et ma maison a pris 60 000 € de valeur !",
       rating: 5,
