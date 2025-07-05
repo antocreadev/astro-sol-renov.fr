@@ -9,7 +9,7 @@ export default function TestimonialsSection() {
     {
       name: "Sophie",
       age: 42,
-      location: "Bordeaux",
+      location: "Bastia",
       quote:
         "J'ai divisé ma facture par deux, j'ai gagné en confort… et ma maison a pris 60 000 € de valeur !",
       details: "Isolation complète + PAC + panneaux solaires",
@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
     },
     {
       name: "Marc & Julie",
-      location: "Montpellier",
+      location: "Nice",
       quote:
         "Une équipe au top, pro, humaine, qui gère tout de A à Z. On dort tranquille.",
       details: "Rénovation globale avec autoconsommation",
@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
     {
       name: "Catherine",
       age: 55,
-      location: "Lyon",
+      location: "Ajaccio",
       quote:
         "En 6 mois, ma maison est devenue un cocon moderne et écologique. Mes enfants sont fiers !",
       details: "Isolation + menuiserie + domotique",

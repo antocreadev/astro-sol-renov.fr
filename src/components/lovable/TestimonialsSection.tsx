@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
     {
       name: "Sophie",
       age: "42 ans",
-      location: "Bordeaux",
+      location: "Bastoa",
       quote:
         "J'ai divisé ma facture par deux, j'ai gagné en confort… et ma maison a pris 60 000 € de valeur !",
       rating: 5,
@@ -41,7 +41,7 @@ const TestimonialsSection = () => {
     {
       name: "Marc & Julie",
       age: "Couple",
-      location: "Montpellier",
+      location: "Nice",
       quote:
         "Une équipe au top, pro, humaine, qui gère tout de A à Z. On dort tranquille.",
       rating: 5,
