@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PostsSection from "../../components/PostsSection";
+
+const seoData = {
+  title:
+    "Actualités SolRenov - Blog Rénovation Énergétique & Panneaux Solaires",
+  description:
+    "Découvrez nos dernières actualités, conseils et projets de rénovation énergétique. Suivez l'évolution du secteur avec SolRenov, expert en panneaux solaires et isolation.",
+  keywords:
+    "actualités rénovation énergétique, blog panneaux solaires, conseils isolation, projets rénovation, actualités SolRenov",
+};
+---
+
+<Layout {...seoData}>
+  <main
+    class="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-green-100"
+  >
+    <Navbar />
+
+    <div class="pt-24">
+      <PostsSection client:load />
+    </div>
+  </main>
+</Layout>
