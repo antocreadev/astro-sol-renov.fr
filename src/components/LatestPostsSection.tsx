@@ -26,7 +26,7 @@ export default function LatestPostsSection() {
 
   const fetchLatestPosts = async () => {
     try {
-      const response = await fetch('/api/posts');
+      const response = await fetch("/api/posts");
 
       if (!response.ok) {
         throw new Error("Erreur lors du chargement des posts");
@@ -88,14 +88,15 @@ export default function LatestPostsSection() {
           </div>
 
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Restez informé sur la 
+            Restez informé sur la
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-500">
               rénovation énergétique
             </span>
           </h2>
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Découvrez nos derniers conseils, actualités sur les aides et projets de rénovation
+            Découvrez nos derniers conseils, actualités sur les aides et projets
+            de rénovation
           </p>
         </motion.div>
 
@@ -173,7 +174,7 @@ export default function LatestPostsSection() {
           <Button
             size="lg"
             className="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 group"
-            onClick={() => window.location.href = '/posts'}
+            onClick={() => (window.location.href = "/posts")}
           >
             <ExternalLink className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
             Voir toutes nos actualités

@@ -3,16 +3,14 @@ import { defineConfig } from "astro/config";
 
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
-import node from "@astrojs/node";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
 
-  // Adaptateur pour le rendu côté serveur
-  adapter: node({
-    mode: "standalone",
-  }),
+  // Adaptateur Vercel pour le rendu côté serveur
+  adapter: vercel({}),
 
   vite: {
     plugins: [tailwindcss()],
