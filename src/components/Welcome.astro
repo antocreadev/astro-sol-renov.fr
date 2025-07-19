@@ -13,6 +13,7 @@ import ValuesSection from "./lovable/ValuesSection";
 import VisionSection from "./lovable/VisionSection";
 import WhySection from "./lovable/WhySection";
 import Navbar from "./Navbar.astro";
+import LatestPostsSection from "./LatestPostsSection.tsx";
 ---
 
 <main
@@ -59,6 +60,10 @@ import Navbar from "./Navbar.astro";
 
   <section id="valeurs" aria-label="Valeurs et engagements SolRenov">
     <ValuesSection client:load />
+  </section>
+
+  <section id="actualites" aria-label="Dernières actualités et aides rénovation énergétique">
+    <LatestPostsSection client:load />
   </section>
 
   <section
