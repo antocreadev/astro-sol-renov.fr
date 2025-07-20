@@ -1,0 +1,15 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ManagePostsApp from "../../components/ManagePostsApp";
+
+const seoData = {
+  title: "Gestion des Posts - Administration SolRenov",
+  description:
+    "Interface d'administration pour gérer les posts et actualités de SolRenov.",
+  keywords: "administration, gestion posts, SolRenov, admin panel",
+};
+---
+
+<Layout {...seoData}>
+  <ManagePostsApp client:load />
+</Layout>
