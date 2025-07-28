@@ -31,10 +31,8 @@ const TestimonialsSection = () => {
       quote:
         "J'ai divisé ma facture par deux, j'ai gagné en confort… et ma maison a pris 60 000 € de valeur !",
       rating: 5,
-      beforeImage:
-        "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
-      afterImage:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      beforeImage: "/avant1.png",
+      afterImage: "/apres1.JPG",
       savings: "1,200€/an",
       valueIncrease: "60,000€",
     },
@@ -45,10 +43,8 @@ const TestimonialsSection = () => {
       quote:
         "Une équipe au top, pro, humaine, qui gère tout de A à Z. On dort tranquille.",
       rating: 5,
-      beforeImage:
-        "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-      afterImage:
-        "https://images.unsplash.com/photo-1518495973542-4542c06a5843",
+      beforeImage: "/avant2.png",
+      afterImage: "/apres2.png",
       savings: "980€/an",
       valueIncrease: "45,000€",
     },
@@ -184,33 +180,6 @@ const TestimonialsSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Action buttons */}
-        <div
-          className={`text-center transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-3 text-white">
-                <Eye className="w-6 h-6 text-green-400 group-hover:scale-110 transition-transform" />
-                <span className="font-semibold">
-                  📸 Voir les transformations avant/après
-                </span>
-              </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-3 text-white">
-                <Play className="w-6 h-6 text-orange-400 group-hover:scale-110 transition-transform" />
-                <span className="font-semibold">
-                  🎤 Écouter les témoignages clients en vidéo
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
